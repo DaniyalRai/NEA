@@ -102,7 +102,7 @@ class DQNTrainer:
             self.optimizer.zero_grad()
             loss.backward()
 
-            torch.nn.utils.clip_grad_value_(self.policyNet.parameters(), 100)
+            
             self.optimizer.step()
 
     def train(self):
